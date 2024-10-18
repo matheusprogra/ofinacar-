@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasilcar - Concesionario de Autos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Brasilcar</h1>
+        <nav>
+            <ul>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="modelos">
+            <h2>Modelos Disponibles</h2>
+            <ul>
+                <li>Modelo A</li>
+                <li>Modelo B</li>
+                <li>Modelo C</li>
+            </ul>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Características de Nuestros Autos</h2>
+            <p>Nuestros vehículos son seguros, eficientes y cuentan con tecnología de punta.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos a través del correo electrónico: info@brasilcar.com</p>
+        </section>
