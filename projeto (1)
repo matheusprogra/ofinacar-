@@ -1,0 +1,35 @@
+        </section><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasilcar - Concesionario de Autos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Brasilcar</h1>
+        <nav>
+            <ul>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="modelos">
+            <h2>vagas Disponivel</h2>
+            <ul>
+                <li> vagas segunda</li>
+                <li>vagas terça </li>
+                <li>vagas quarta </li>
+            </ul>
+        <section id="caracteristicas">
+            <h2>Características de nossa oficina</h2>
+            <p></p>mecanica em geral,freio,suspenção, troca de oleo,injeção eletronica, seguros de autos.</p>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p> para mais infomações,contato:(19)99654-4321 ou autos@55car.com</p>
+        </section>
