@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Mecânica Automotiva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            background-color: #e9f7ff;
+        }
+        legend {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #007BFF;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .required {
+            color: red;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Avaliação Mecânica</h1>
+    <div class="image-container">
+        <img src="https://via.placeholder.com/600x200.png?text=Mecânica+Automotiva" alt="Mecânica Automotiva">
+    </div>
+   
+    <form action="/enviar" method="POST">
+        <fieldset>
+            <legend>Informações do Proprietário</legend>
+            <label for="nome">Nome <span class="required">*</span>:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="telefone">Telefone <span class="required">*</span>:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="email">E-mail <span class="required">*</span>:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações do Veículo</legend>
+            <label for="marca">Marca <span class="required">*</span>:</label>
+            <input type="text" id="marca" name="marca" required>
+
+            <label for="modelo">Modelo <span class="required">*</span>:</label>
+            <input type="text" id="modelo" name="modelo" required>
+
+            <label for="ano">Ano <span class="required">*</span>:</label>
+            <input type="number" id="ano" name="ano" min="1900" max="2024" required>
+
+            <label for="placa">Placa <span class="required">*</span>:</label>
+            <input type="text" id="placa" name="placa" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Problemas Relatados</legend>
+            <label for="problemas">Descreva os problemas que você está enfrentando <span class="required">*</span>:</label>
+            <textarea id="problemas" name="problemas" rows="4" required></textarea>
+
+            <label>Serviços desejados:</label>
+            <input type="checkbox" id="troca_oleo" name="servicos" value="troca_oleo">
+            <label for="troca_oleo">Troca de Óleo</label>
+            <input type="checkbox" id="alinhamento" name="servicos" value="alinhamento">
+            <label for="alinhamento">Alinhamento</label>
+            <input type="checkbox" id="balanceamento" name="servicos" value="balanceamento">
+            <label for="balanceamento">Balanceamento</label>
+            <input type="checkbox" id="outros" name="servicos" value="outros">
+            <label for="outros">Outros</label>
+            <input type="text" id="outros_desc" name="outros_desc" placeholder="Especifique outros serviços">
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

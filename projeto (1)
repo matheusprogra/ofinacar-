@@ -18,18 +18,4 @@
         </nav>
     </header>
     <main>
-        <section id="modelos">
-            <h2>vagas Disponivel</h2>
-            <ul>
-                <li> vagas segunda</li>
-                <li>vagas terça </li>
-                <li>vagas quarta </li>
-            </ul>
-        <section id="caracteristicas">
-            <h2>Características de nossa oficina</h2>
-            <p></p>mecanica em geral,freio,suspenção, troca de oleo,injeção eletronica, seguros de autos.</p>
-        </section>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p> para mais infomações,contato:(19)99654-4321 ou autos@55car.com</p>
-        </section>
+       
