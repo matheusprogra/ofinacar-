@@ -1,98 +1,127 @@
-<!DO<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: #007BFF;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #007BFF;
-            color: white;
-        }
-    </style>
+    <meta name="description" content="Oficina Automotiva - Reparos e manutenções especializadas para o seu carro. Compre peças e agende serviços de qualidade e confiança.">
+    <title>Oficina Automotiva - O Cuidado que Seu Carro Merece</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Bem-vindo ao Meu Site</h1>
+        <h1>Oficina Automotiva</h1>
         <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#shop">Loja</a></li>
+                <li><a href="#sobre">Quem Somos</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="#perfil">Meu Perfil</a></li>
+                <li><a href="#cesta">Cesta (3)</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="home">
-            <h2>Início</h2>
-            <p>Esta é a seção inicial do site. Aqui você pode adicionar informações interessantes.</p>
+            <h2>Bem-vindo à Nossa Oficina</h2>
+            <p>O cuidado que seu carro merece. Oferecemos serviços automotivos de alta qualidade e confiabilidade para garantir que seu veículo esteja sempre em ótimo estado.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <p>Nós somos especializados em uma ampla gama de serviços automotivos, de reparos simples a manutenções mais complexas. Confira nossos principais serviços:</p>
+            <ul>
+                <li>Troca de Óleo</li>
+                <li>Manutenção de Embreagem</li>
+                <li>Revisão dos Componentes de Freio</li>
+                <li>Alinhamento e Balanceamento</li>
+                <li>Funilaria e Pintura</li>
+                <li>Reforma nos Bancos</li>
+                <li>Consertos de Botões e Peças Eletrônicas</li>
+                <li>Substituição de Peças</li>
+            </ul>
+            <h3>Embreagem</h3>
+            <ul>
+                <li>Embreagem Patinando</li>
+                <li>Trepidação</li>
+                <li>Embreagem Travada</li>
+                <li>Ruído Excessivo</li>
+                <li>Pedal Duro</li>
+            </ul>
+        </section>
+
+        <section id="shop">
+            <h2>Loja</h2>
+            <p>Explore nossa loja online e compre as melhores peças automotivas com entrega rápida e segura.</p>
+            <ul>
+                <li>Jogo de Soquetes Sextavados - $6.50</li>
+                <li>Revisão dos Componentes de Freio - $12.99 / lb</li>
+                <li>Sweet Onion - $14.95 / lb</li>
+            </ul>
+            <h3>Resumo do Pedido</h3>
+            <ul>
+                <li>Subtotal: $27.44</li>
+                <li>Frete: $3.99</li>
+                <li>Taxa: $2.00</li>
+                <li>Total: $33.43</li>
+            </ul>
+            <button>Continue para o pagamento</button>
         </section>
 
         <section id="sobre">
-            <h2>Sobre</h2>
-            <p>Esta seção é dedicada a descrever o propósito do site e informações relevantes.</p>
+            <h2>Quem Somos</h2>
+            <p>Somos mecânicos especializados em fornecer serviços automotivos de alta qualidade. Com mais de 10 anos de experiência, nossa oficina está equipada com as melhores ferramentas e peças para garantir a excelência em cada serviço prestado.</p>
+            <p>Nossa missão é oferecer transparência, confiança e dedicação. Cada processo é explicado ao cliente para que ele tenha total conhecimento do que está sendo feito no seu veículo.</p>
+            <p>Seja para uma simples troca de óleo, um alinhamento ou uma revisão completa, você pode contar com nossa expertise. Estamos prontos para atender todas as necessidades do seu carro com carinho e profissionalismo.</p>
         </section>
 
         <section id="contato">
             <h2>Contato</h2>
-            <p>Entre em contato conosco através do formulário abaixo.</p>
-            <form>
+            <p>Entre em contato conosco para agendar seus serviços ou tirar dúvidas:</p>
+            <form id="contactForm">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" required></textarea>
-                
+
                 <button type="submit">Enviar</button>
             </form>
+            <div id="formMessage" class="hidden"></div>
+        </section>
+
+        <section id="perfil">
+            <h2>Meu Perfil</h2>
+            <p>Acesse o seu perfil para acompanhar seus pedidos e serviços agendados.</p>
+            <button>Ir para o perfil</button>
+        </section>
+
+        <section id="cesta">
+            <h2>Cesta (3 itens)</h2>
+            <ul>
+                <li>Jogo de Soquetes Sextavados - $6.50</li>
+                <li>Revisão dos Componentes de Freio - $12.99</li>
+                <li>Sweet Onion - $14.95</li>
+            </ul>
+            <h3>Total: $33.43</h3>
+            <button>Finalizar Compra</button>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Oficina Automotiva. Todos os direitos reservados.</p>
+        <p>Redes sociais: 
+            <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </p>
+        <p>SAC: 0800 100 6565 | 55 (16) 99156-6845</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
