@@ -1,21 +1,70 @@
-        </section><!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasilcar - Concesionario de Autos</title>
+    <title>Oficina Automotiva - Seu Carro em Boas Mãos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Brasilcar</h1>
+        <h1>Oficina Automotiva</h1>
         <nav>
             <ul>
-                <li><a href="#modelos">Modelos</a></li>
-                <li><a href="#caracteristicas">Características</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-       
+        <section id="home">
+            <h2>Bem-vindo à Nossa Oficina</h2>
+            <p>Seu carro em boas mãos! Oferecemos serviços de alta qualidade para garantir que seu veículo esteja sempre em ótimo estado.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <ul>
+                <li>Troca de Óleo</li>
+                <li>Revisão Completa</li>
+                <li>Alinhamento e Balanceamento</li>
+                <li>Serviços de Freios</li>
+                <li>Manutenção de Suspensão</li>
+                <li>Diagnóstico Eletrônico</li>
+            </ul>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Com mais de 10 anos de experiência, nossa oficina é especializada em serviços automotivos de qualidade. Nossa equipe é composta por mecânicos qualificados e apaixonados por carros.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco através do formulário abaixo:</p>
+            <form id="contactForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="formMessage" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Oficina Automotiva. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
