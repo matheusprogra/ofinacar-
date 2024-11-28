@@ -31,6 +31,13 @@
             <p>O cuidado que seu carro merece. Oferecemos serviços automotivos de alta qualidade e confiabilidade para garantir que seu veículo esteja sempre em ótimo estado.</p>
         </section>
 
+        <section id="sobre">
+            <h2>Quem Somos</h2>
+            <p>Somos mecânicos especializados em fornecer serviços automotivos de alta qualidade. Com mais de 10 anos de experiência, nossa oficina está equipada com as melhores ferramentas e peças para garantir a excelência em cada serviço prestado.</p>
+            <p>Nossa missão é oferecer transparência, confiança e dedicação. Cada processo é explicado ao cliente para que ele tenha total conhecimento do que está sendo feito no seu veículo.</p>
+            <p>Seja para uma simples troca de óleo, um alinhamento ou uma revisão completa, você pode contar com nossa expertise. Estamos prontos para atender todas as necessidades do seu carro com carinho e profissionalismo.</p>
+        </section>
+
         <section id="servicos">
             <h2>Serviços</h2>
             <p>Nós somos especializados em uma ampla gama de serviços automotivos, de reparos simples a manutenções mais complexas. Confira nossos principais serviços:</p>
@@ -69,14 +76,24 @@
                 <li>Taxa: $2.00</li>
                 <li>Total: $33.43</li>
             </ul>
-            <button>Continue para o pagamento</button>
+            <button onclick="location.href='pagamentoCartao.html'">Continue para o pagamento</button>
         </section>
 
-        <section id="sobre">
-            <h2>Quem Somos</h2>
-            <p>Somos mecânicos especializados em fornecer serviços automotivos de alta qualidade. Com mais de 10 anos de experiência, nossa oficina está equipada com as melhores ferramentas e peças para garantir a excelência em cada serviço prestado.</p>
-            <p>Nossa missão é oferecer transparência, confiança e dedicação. Cada processo é explicado ao cliente para que ele tenha total conhecimento do que está sendo feito no seu veículo.</p>
-            <p>Seja para uma simples troca de óleo, um alinhamento ou uma revisão completa, você pode contar com nossa expertise. Estamos prontos para atender todas as necessidades do seu carro com carinho e profissionalismo.</p>
+        <section id="cesta">
+            <h2>Cesta (3 itens)</h2>
+            <ul>
+                <li>Jogo de Soquetes Sextavados - $6.50</li>
+                <li>Revisão dos Componentes de Freio - $12.99</li>
+                <li>Sweet Onion - $14.95</li>
+            </ul>
+            <h3>Total: $33.43</h3>
+            <button onclick="location.href='pagamentoCartao.html'">Finalizar Compra</button>
+        </section>
+
+        <section id="perfil">
+            <h2>Realize uma avaliação mecânica</h2>
+            <p>Acesse nosso formulário de avaliação mecânica automotiva para informar os dados do seu veículo e descrever os problemas encontrados. Com essas informações, nossa equipe técnica poderá avaliar sua situação com agilidade e precisão, garantindo o melhor diagnóstico e solução para o seu carro.</p>
+            <button onclick="location.href='formulario.html'">avaliação mecânica</button>
         </section>
 
         <section id="contato">
@@ -92,27 +109,11 @@
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" required></textarea>
 
-                <button type="submit">Enviar</button>
+                <button type="submit" id="enviarFormulario">Enviar</button>
             </form>
             <div id="formMessage" class="hidden"></div>
         </section>
 
-        <section id="perfil">
-            <h2>Meu Perfil</h2>
-            <p>Acesse o seu perfil para acompanhar seus pedidos e serviços agendados.</p>
-            <button>Ir para o perfil</button>
-        </section>
-
-        <section id="cesta">
-            <h2>Cesta (3 itens)</h2>
-            <ul>
-                <li>Jogo de Soquetes Sextavados - $6.50</li>
-                <li>Revisão dos Componentes de Freio - $12.99</li>
-                <li>Sweet Onion - $14.95</li>
-            </ul>
-            <h3>Total: $33.43</h3>
-            <button>Finalizar Compra</button>
-        </section>
     </main>
 
     <footer>
@@ -124,6 +125,36 @@
         <p>SAC: 0800 100 6565 | 55 (16) 99156-6845</p>
     </footer>
 
-    <script src="script.js"></script>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Email enviado!</h3>
+            <p>Sua mensagem foi enviada com sucesso, em breve lhe enviaremos um retorno.</p>
+            <button id="fecharModal">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        // Elementos do modal
+        const modal = document.getElementById('modal');
+        const fecharModal = document.getElementById('fecharModal');
+        const confirmarPagamento = document.getElementById('enviarFormulario');
+
+        // Exibe o modal ao clicar no botão
+        confirmarPagamento.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        // Fecha o modal ao clicar no botão "Fechar"
+        fecharModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Fecha o modal ao clicar fora do conteúdo
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
